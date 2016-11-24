@@ -1,0 +1,43 @@
+g_plateform_home:
+    path:    /{page}
+    defaults:
+        _controller: GPlateformBundle:Advert:index
+        page: 1
+    requirements:
+        page: \d*
+
+g_plateform_view:
+    path:    /article/{id}
+    defaults:
+        _controller: GPlateformBundle:Advert:view
+    requirements: 
+        id: \d+
+
+g_plateform_add:
+    path:    /add
+    defaults:
+         _controller: GPlateformBundle:Advert:add
+
+g_plateform_edit:
+    path:    /edit/{id}
+    defaults: 
+        _controller: GPlateformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+g_plateform_delete:
+    path:    /delete/{id}
+    defaults:
+        _controller: GPlateformBundle:Advert:delete
+    requirements:
+        id: \d+
+
+g_plateform_songs:
+    path: /songs
+    defaults:
+        _controller: GPlateformBundle:Advert:songs
+
+g_plateform_news:
+    path: /news
+    defaults:
+        _controller: GPlateformBundle:Advert:news

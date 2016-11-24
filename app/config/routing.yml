@@ -1,0 +1,4 @@
+g_plateform:
+    resource: "@GPlateformBundle/Resources/config/routing.yml"
+    prefix:   /plateform
+

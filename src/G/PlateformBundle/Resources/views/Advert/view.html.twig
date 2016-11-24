@@ -1,0 +1,37 @@
+{% extends "GPlateformBundle::layout.html.twig" %}
+
+  {% block title %}
+    Lecture d'une annonce - {{ parent() }}
+  {% endblock %}
+
+  {% block g_plateform_body %}
+
+
+    <div class="container">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+
+                    {# on affiche l'image upladé ( stockée dans /img ) #}
+                        <img src="{{ asset('img/' ~ article.uploadImage) }}">
+
+
+
+                </div>
+
+                <div class="card-content">
+                     <h4>{{ article.title }}</h4>
+                     <i>Le {{ article.date|date('d/m/Y') }}</i>
+                     <p> {{ article.content }} </p>
+
+                </div>
+            </div>
+            <p>
+                <a href="{{ path('g_plateform_delete', {'id': article.id}) }}" class="btn btn-danger grey darken-1">
+                <i class="glyphicon glyphicon-trash grey darken-1 "></i>
+                  supprimer l'article </a>
+            </p>
+        </div>
+    </div>
+  {% endblock %}
+

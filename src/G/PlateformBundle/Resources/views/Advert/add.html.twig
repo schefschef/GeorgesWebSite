@@ -1,0 +1,16 @@
+
+{% extends "GPlateformBundle::layout.html.twig" %}
+
+{% block body %}
+  <div class="container">
+  <h1 class="flow-text">Ajouter un article</h1>
+
+
+
+  <p>
+    {{ include("GPlateformBundle:Advert:form.html.twig") }}
+    Attention : cette annonce sera ajoutée directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+  </div>
+{% endblock %}
