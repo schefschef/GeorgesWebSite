@@ -11,7 +11,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use G\PlateformBundle\Entity\Articles;
-
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use G\PlateformBundle\Form\ArticleEditType;
 use G\PlateformBundle\Form\ArticleType;
 
@@ -19,6 +20,7 @@ use G\PlateformBundle\Form\ArticleType;
 
 class AdvertController extends Controller
 {
+
   public function indexAction($page)
   {
 
@@ -58,6 +60,10 @@ class AdvertController extends Controller
       'article' => $article
     ));
   }
+
+    /**
+     * @Security("has_role('ROLE_AUTEUR')")
+     */
 
   public function addAction(Request $request)
   {

@@ -47,7 +47,9 @@
                                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Media</a></li>
                                 <li><a href="{{ path('g_plateform_about') }}">About</a></li>
                                 <li><a href="{{ path('g_plateform_contact') }}">Contact</a></li>
+                                {% if is_granted('ROLE_AUTEUR') %}
                                 <li><a class="dropdown-button" href="#!" data-activates="dropdown2"><i class="material-icons">reorder</i></a></li>
+                                {%  endif %}
                             </ul>
                          </div>
                      </nav>
