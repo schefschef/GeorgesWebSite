@@ -20,13 +20,22 @@
         <img  width="500" src="{{ asset('img/coverGeorges.jpg') }}">
     </div>
 </div>
+    <style>
+         .im1, .im2, .im3, .im4 {
+            opacity: 0;
+        }
+    </style>
     <script>
-        var options = [ {selector: '.im1', offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
-            {selector: '.im2', offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
-                {selector: '.im3',offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
-            {selector: '.im4',offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}}];
+        $(function () {
+            var options = [ {selector: '.im1', offset: 500, callback: function(el) { Materialize.fadeInImage($(el));}},
+                {selector: '.im2', offset: 500, callback: function(el) { Materialize.fadeInImage($(el));}},
+                {selector: '.im3',offset: 500, callback: function(el) { Materialize.fadeInImage($(el));}},
+                {selector: '.im4',offset:  500, callback: function(el) { Materialize.fadeInImage($(el));}}];
+            Materialize.scrollFire(options);
+        });
 
-        Materialize.scrollFire(options);
+
+
 
     </script>
 {% endblock %}
