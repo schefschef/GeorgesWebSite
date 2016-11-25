@@ -11,7 +11,6 @@
 
 
 
-
     <div class="row">
         <div class="col s12 m6  ">
             <div class="card grey darken-1">
@@ -22,7 +21,7 @@
 
                         {% for article in listArticle %}
                             <li>
-                                <a href="{{ path('g_plateform_view', {'id': article.id}) }}"class="collection-item grey lighten-2 black-text">
+                                <a href="{{ path('g_plateform_view', {'id': article.id}) }}"class="collection-item black-text">
                                     <span class="badge"></span>
                                     {{ article.title }}, le {{ article.date|date('d/m/Y') }}
                                 </a>
@@ -46,6 +45,9 @@
     </div>
     </div>
 
-
+<script> $(document).ready(function(){
+        $('.slider').slider({full_width: true});
+    });
+</script>
 
 {% endblock %}

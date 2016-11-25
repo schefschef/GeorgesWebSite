@@ -31,12 +31,13 @@
                 <div id="header">
                     <img src="{{ asset('img/georges2.png') }}" width="100%" />
                     <ul id="dropdown1" class="dropdown-content grey darken-1">
-                        <li><a href="#" class="white-text">Arts</a></li>
+                        <li><a href="{{ path('g_plateform_art') }}" class="white-text">Arts</a></li>
                         <li class="divider"></li>
                         <li><a href="{{ path('g_plateform_songs') }}" class="white-text">Songs</a></li>
                     </ul>
                     <ul id="dropdown2" class="dropdown-content grey darken-1">
                         <li><a href="{{ path('g_plateform_add') }}" class="white-text">Add a news</a></li>
+                        <li><a href="{{ path('g_plateform_showDelete') }}" class="white-text">Delete/Edit a news</a></li>
                     </ul>
                     <nav>
                         <div id="menu" class="nav-wrapper grey darken-1">

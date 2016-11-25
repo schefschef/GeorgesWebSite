@@ -18,6 +18,11 @@ g_plateform_add:
     defaults:
          _controller: GPlateformBundle:Advert:add
 
+g_plateform_showDelete:
+    path:    /showDelete
+    defaults:
+         _controller: GPlateformBundle:Advert:showDelete
+
 g_plateform_edit:
     path:    /edit/{id}
     defaults: 
@@ -36,6 +41,11 @@ g_plateform_songs:
     path: /songs
     defaults:
         _controller: GPlateformBundle:Advert:songs
+
+g_plateform_art:
+    path: /art
+    defaults:
+        _controller: GPlateformBundle:Advert:art
 
 g_plateform_news:
     path: /news

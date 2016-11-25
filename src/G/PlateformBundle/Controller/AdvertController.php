@@ -151,6 +151,13 @@ class AdvertController extends Controller
     return $this->render('GPlateformBundle:Advert:songs.html.twig');
  
   }
+    public function artAction()
+    {
+
+
+        return $this->render('GPlateformBundle:Advert:art.html.twig');
+
+    }
     public function contactAction()
     {
 
@@ -163,6 +170,19 @@ class AdvertController extends Controller
 
 
         return $this->render('GPlateformBundle:Advert:about.html.twig');
+
+    }
+    public function showDeleteAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $listLastArticle = $em
+            ->getRepository('GPlateformBundle:Articles')
+            ->findAll();
+        ;
+
+
+        return $this->render('GPlateformBundle:Advert:showDelete.html.twig', array('listArticle'=>$listLastArticle));
 
     }
 }

@@ -1,0 +1,25 @@
+{% extends "GPlateformBundle::layout.html.twig" %}
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block g_plateform_body %}
+
+    <div class=" carousel">
+        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/two.jpg') }}"></a>
+        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/one.jpg') }}"></a>
+        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/three.jpg') }}"></a>
+        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/coverGeorges.jpg') }}"></a>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({time_constant:200});
+            $('.materialboxed').materialbox();
+
+
+        });</script>
+{% endblock %}
