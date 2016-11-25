@@ -6,20 +6,27 @@
 {% endblock %}
 
 {% block g_plateform_body %}
-
-    <div class=" carousel">
-        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/two.jpg') }}"></a>
-        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/one.jpg') }}"></a>
-        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/three.jpg') }}"></a>
-        <a class="carousel-item" ><img class="materialboxed" width="500" src="{{ asset('img/coverGeorges.jpg') }}"></a>
-
+<div class="center">
+    <div class="im1">
+        <img  width="500" src="{{ asset('img/two.jpg') }}">
     </div>
-
+    <div class="im2">
+        <img  width="500" src="{{ asset('img/one.jpg') }}">
+    </div>
+    <div class="im3">
+        <img  width="500" src="{{ asset('img/three.jpg') }}">
+    </div>
+    <div class="im4">
+        <img  width="500" src="{{ asset('img/coverGeorges.jpg') }}">
+    </div>
+</div>
     <script>
-        $(document).ready(function(){
-            $('.carousel').carousel({time_constant:200});
-            $('.materialboxed').materialbox();
+        var options = [ {selector: '.im1', offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
+            {selector: '.im2', offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
+                {selector: '.im3',offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}},
+            {selector: '.im4',offset: 10, callback: function(el) { Materialize.fadeInImage($(el));}}];
 
+        Materialize.scrollFire(options);
 
-        });</script>
+    </script>
 {% endblock %}
