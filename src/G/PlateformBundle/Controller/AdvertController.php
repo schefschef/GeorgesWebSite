@@ -99,7 +99,9 @@ class AdvertController extends Controller
             throw new NotFoundHttpException("L'article d'id ".$id." n'existe pas.");
         }
         $form = $this->get('form.factory')->create(ArticleEditType::class, $article);
+
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+
 
             $em->flush();
             $request->getSession()->getFlashBag()->add('notice', 'Article bien modifiée.');
