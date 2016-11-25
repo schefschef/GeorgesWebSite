@@ -156,6 +156,13 @@ class AdvertController extends Controller
 
 
         return $this->render('GPlateformBundle:Advert:contact.html.twig');
+    }
+
+    public function aboutAction()
+    {
+
+
+        return $this->render('GPlateformBundle:Advert:about.html.twig');
 
     }
 }

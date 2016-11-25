@@ -46,3 +46,8 @@ g_plateform_contact:
     path: /contact
     defaults:
         _controller: GPlateformBundle:Advert:contact
+
+g_plateform_about:
+    path: /about
+    defaults:
+        _controller: GPlateformBundle:Advert:about
