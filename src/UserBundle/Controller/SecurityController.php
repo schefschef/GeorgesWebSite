@@ -10,9 +10,11 @@ class SecurityController extends Controller
     public function loginAction(Request $request)
     {
 
-        if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+        if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED'))
+        {
             return $this->redirectToRoute('g_plateform_home');
         }
+
 
         $authenticationUtils = $this->get('security.authentication_utils');
 
