@@ -1,0 +1,41 @@
+
+{% extends "GPlateformBundle::layout.html.twig" %}
+
+{% block title %}
+    Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block g_plateform_body %}
+
+
+
+
+    <div class="container">
+
+            <div class="card">
+
+                <div class="card-content">
+                    <h5>Editer un article</h5>
+                    {{ include("GPlateformBundle:Advert:form.html.twig") }}
+
+
+
+                    {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+
+                        <a href="{{ path('g_plateform_view', {'id': article.id}) }}" class="btn btn-default grey darken-1">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Retour à l'annonce
+                        </a>
+
+                        <input type="submit" value="Editer" class="btn btn-danger grey darken-1" />
+                        {# Ceci va générer le champ CSRF #}
+
+
+
+
+                </div>
+            </div>
+
+    </div>
+
+{% endblock %}
